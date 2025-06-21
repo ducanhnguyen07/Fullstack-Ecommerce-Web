@@ -86,13 +86,12 @@ pipeline {
                     
                     // Update values.yaml file
                     sh """
-                        cd config-repo
+                        cd config-repo/ecommerce-chart
                         
-                        # Simple approach: Update both frontend and backend tags in values.yaml
-                        # This will update both 'tag: v1' entries to the new tag
+                        # Update both frontend and backend tags in values.yaml
                         sed -i 's/tag: .*/tag: ${env.TAG_NAME}/g' values.yaml
                         
-                        # Show the changes
+                        # Show changes
                         echo "=== Changes made to values.yaml ==="
                         git diff values.yaml
                         
@@ -115,8 +114,7 @@ pipeline {
     
     post {
         always {
-            // Clean up
-            sh 'docker system prune -f'
+            // Clean up workspace only
             cleanWs()
         }
         success {

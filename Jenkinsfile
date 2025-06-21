@@ -5,7 +5,7 @@ pipeline {
         DOCKER_HUB_FRONTEND_REPO = 'anhnd2301/ecommerce-frontend'
         DOCKER_HUB_BACKEND_REPO = 'anhnd2301/ecommerce-backend'
         CONFIG_REPO_URL = 'https://github.com/ducanhnguyen07/ecommerce-k8s.git'
-        CONFIG_REPO_BRANCH = 'main'
+        CONFIG_REPO_BRANCH = 'master'
     }
     
     stages {

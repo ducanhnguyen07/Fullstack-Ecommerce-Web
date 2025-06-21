@@ -8,7 +8,7 @@ import {OrderHistory} from "../common/order-history";
 })
 export class OrderHistoryService {
 
-  private orderUrl = "http://api-ecommerce.devopsedu.vn/api/orders";
+  private orderUrl = "http://192.168.42.113:30081/api/orders";
   constructor(private httpClient: HttpClient) { }
 
 

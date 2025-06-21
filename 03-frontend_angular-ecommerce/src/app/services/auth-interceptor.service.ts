@@ -20,7 +20,7 @@ export class AuthInterceptorService implements HttpInterceptor{
   private async handleAccess(request: HttpRequest<any>, next: HttpHandler): Promise<HttpEvent<any>> {
 
     //only add an access token for secured endpoints
-    const securedEndpoints = ['http://api-ecommerce.devopsedu.vn/api/orders'];
+    const securedEndpoints = ['http://192.168.42.113:30081/api/orders'];
 
     if(securedEndpoints.some(url => request.urlWithParams.includes(url))){
 

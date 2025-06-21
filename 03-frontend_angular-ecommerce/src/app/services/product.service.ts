@@ -9,9 +9,9 @@ import {ProductCategory} from "../common/product-category";
 })
 export class ProductService {
 
-  private baseUrl = "http://api-ecommerce.devopsedu.vn/api/products";
+  private baseUrl = "http://192.168.42.113:30081/api/products";
 
-  private categoryUrl = "http://api-ecommerce.devopsedu.vn/api/product-category";
+  private categoryUrl = "http://192.168.42.113:30081/api/product-category";
 
   //injecting httpClient
   constructor(private httpClient: HttpClient) { }
